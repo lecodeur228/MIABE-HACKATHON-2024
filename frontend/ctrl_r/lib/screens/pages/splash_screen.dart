@@ -88,10 +88,22 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: controleNotUplaod == null
-          ? Center(
-              child: CircularProgressIndicator(
-                color: Theme.of(context).primaryColor,
-              ),
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "assets/images/logo.png",
+                  height: 150,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Center(
+                  child: CircularProgressIndicator(
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ],
             )
           : controleNotUplaod!.isNotEmpty
               ? Center(
@@ -116,10 +128,22 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                 )
-              : Center(
-                  child: CircularProgressIndicator(
-                  color: Theme.of(context).primaryColor,
-                )),
+              : Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/images/logo.png",
+                      height: 150,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Center(
+                        child: CircularProgressIndicator(
+                      color: Theme.of(context).primaryColor,
+                    )),
+                  ],
+                ),
     );
   }
 }

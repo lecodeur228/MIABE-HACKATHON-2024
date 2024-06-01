@@ -354,7 +354,70 @@ class _AdminHomeState extends State<AdminHome> {
                   ),
                 ),
                 SizedBox(
-                  height: context.heightPercent(2),
+                  height: context.heightPercent(3),
+                ),
+                Container(
+                  padding: EdgeInsets.all(context.heightPercent(2)),
+                  width: double.infinity,
+                  height: context.heightPercent(20),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                        )
+                      ]),
+                  child: Column(
+                    children: [
+                      const Text(
+                        "Effectifs des agents",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      SizedBox(
+                        height: context.heightPercent(1),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Column(
+                            children: [
+                              Center(
+                                child: Text(
+                                  "👮‍♂",
+                                  style: TextStyle(
+                                      fontSize: context.heightPercent(5)),
+                                ),
+                              ),
+                              Text("ADMIN: 10",
+                                  style: TextStyle(
+                                      fontSize: context.t3,
+                                      fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(
+                                child: Text(
+                                  "👮‍♂",
+                                  style: TextStyle(
+                                      fontSize: context.heightPercent(5)),
+                                ),
+                              ),
+                              Text("OFFICER: 20",
+                                  style: TextStyle(
+                                      fontSize: context.t3,
+                                      fontWeight: FontWeight.bold)),
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),

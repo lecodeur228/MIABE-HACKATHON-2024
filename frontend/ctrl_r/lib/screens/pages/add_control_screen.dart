@@ -3,6 +3,7 @@ import 'package:ctrl_r/helpers/screen.dart';
 import 'package:ctrl_r/helpers/text.dart';
 import 'package:ctrl_r/models/controle.dart';
 import 'package:ctrl_r/providers/controle_provider.dart';
+import 'package:ctrl_r/screens/pages/scan_screen.dart';
 import 'package:ctrl_r/screens/widgets/button_widget.dart';
 import 'package:ctrl_r/screens/widgets/input_widget.dart';
 import 'package:ctrl_r/services/check_connectivity.dart';
@@ -345,6 +346,17 @@ class _CustomInputWidgetState extends State<CustomInputWidget> {
         }
       },
       decoration: InputDecoration(
+        suffixIcon: IconButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TextScan(
+                      plaqueController: widget.controller,
+                    ),
+                  ));
+            },
+            icon: const Icon(Icons.camera)),
         contentPadding: EdgeInsets.symmetric(
             vertical: context.heightPercent(2),
             horizontal: context.widthPercent(3)),
